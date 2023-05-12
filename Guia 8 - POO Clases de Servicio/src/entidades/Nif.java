@@ -45,8 +45,5 @@ public class Nif {
     public void setLetter(char letter) {
         this.letter = letter;
     }
-    
-    
-    
-    
+
 }
