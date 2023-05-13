@@ -6,6 +6,9 @@ package service;
 
 import entidades.Perro;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
 import java.util.Scanner;
 
 /**
@@ -31,7 +34,8 @@ public class perroService {
     
         while (!salir) {    
             System.out.println("Ingrese una raza de perro: ");
-            array.add(crearPerro());
+            Perro perro = crearPerro();
+            array.add(perro);
             
             System.out.println("Desea salir? (s/n) ");
             rta = sc.nextLine();
@@ -49,6 +53,28 @@ public class perroService {
         for(Perro dogui : array){
             System.out.println("Raza de perro => " + dogui.getRaza());
         }
+    }
+    
+    
+
+    public void eliminarPerro(ArrayList<Perro> perros) {
+        Iterator<Perro> contador = perros.iterator();
+        System.out.println("===== Eliminador de perros :| (turbio) =====");
+        System.out.println("Ingrese una raza de Perro a Eliminar: ");
+        String eliminado = sc.nextLine();
+        boolean elimino = false;
+        
+        while (contador.hasNext()) {
+            if (contador.next().getRaza().equals(eliminado)) {
+                System.out.println("Perro eliminado (sigue turbio) => " + eliminado);
+                contador.remove();
+                elimino = true;
+            }
+        }
+        
+        if(!elimino) System.out.println("El perro no se ha encontrado");
+
+        perros.sort(Perro.compararRaza);
     }
     
     

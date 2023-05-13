@@ -4,6 +4,8 @@
  */
 package entidades;
 
+import java.util.Comparator;
+
 /**
  *
  * @author fedmo
@@ -34,5 +36,11 @@ public class Perro {
         this.raza = raza;
     }
     
+    public static Comparator<Perro> compararRaza = new Comparator<Perro>() {
+        @Override
+        public int compare(Perro p1, Perro p2){
+            return p1.getRaza().compareTo(p2.getRaza());
+        }
+    };
     
 }

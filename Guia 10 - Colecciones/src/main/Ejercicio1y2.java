@@ -2,7 +2,6 @@ package main;
 
 import entidades.Perro;
 import java.util.ArrayList;
-import java.util.Scanner;
 import service.perroService;
 
 /*
@@ -14,15 +13,18 @@ import service.perroService;
  *
  * @author fedmo
  */
-public class Ejercicio1 {
+public class Ejercicio1y2 {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in).useDelimiter("\n");
         perroService veterinaria = new perroService();
         ArrayList<Perro> razaPerros = new ArrayList();
         
         veterinaria.agregarPerro(razaPerros);
         veterinaria.mostrarLista(razaPerros);
+        veterinaria.eliminarPerro(razaPerros);
+        veterinaria.mostrarLista(razaPerros);
+            
+
         
     }
     
