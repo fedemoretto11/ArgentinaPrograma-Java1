@@ -13,14 +13,14 @@ import java.util.Comparator;
 public class Pelicula {
     private String titulo;
     private String director;
-    private int duracion;
+    private double duracion;
 
     
     // Constructor 
     public Pelicula() {
     }
 
-    public Pelicula(String titulo, String director, int duracion) {
+    public Pelicula(String titulo, String director, double duracion) {
         this.titulo = titulo;
         this.director = director;
         this.duracion = duracion;
@@ -36,7 +36,7 @@ public class Pelicula {
         return director;
     }
 
-    public int getDuracion() {
+    public double getDuracion() {
         return duracion;
     }
     
@@ -50,7 +50,7 @@ public class Pelicula {
         this.director = director;
     }
 
-    public void setDuracion(int duracion) {
+    public void setDuracion(double duracion) {
         this.duracion = duracion;
     }
     
@@ -58,14 +58,14 @@ public class Pelicula {
     public static Comparator<Pelicula> duracionMayor = new Comparator<Pelicula>(){
         @Override
         public int compare(Pelicula p1, Pelicula p2) {
-            return Integer.compare(p2.getDuracion(),p1.getDuracion());
+            return Double.compare(p2.getDuracion(),p1.getDuracion());
         }
     };
     
     public static Comparator<Pelicula> duracionMenor = new Comparator<Pelicula>(){
         @Override
         public int compare(Pelicula p1, Pelicula p2) {
-            return Integer.compare(p1.getDuracion(),p2.getDuracion());
+            return Double.compare(p1.getDuracion(),p2.getDuracion());
         }
     };
     

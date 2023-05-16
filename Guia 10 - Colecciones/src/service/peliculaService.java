@@ -17,7 +17,8 @@ public class peliculaService {
     private Scanner sc = new Scanner(System.in).useDelimiter("\n");
     
     public void crearPelicula(ArrayList<Pelicula> arrayList) {
-        int peli = 0;
+        boolean salir   = false;
+        String rta;
         
         do {
         System.out.println("===== INGRESO DE FILMS =====");
@@ -27,13 +28,14 @@ public class peliculaService {
         String director = sc.nextLine();
         System.out.println("Ingrese la duracion en horas de la pelicula: ");
         int duracion = sc.nextInt();
-        
-        System.out.println("Desea ingresar otra peli? (1 = si / 0 = no)");
-        peli = sc.nextInt();
         sc.nextLine();
         
         arrayList.add(new Pelicula(nombre, director, duracion));
-        } while (peli == 1);
+        System.out.println("Desea cargar otra pelicula?? (s/n)");
+        salir = !validarRta().equals("s"); 
+        
+        
+        } while (!salir);
     }
     
     public void mostrarPeliculas(ArrayList<Pelicula> arrayList) {
@@ -64,5 +66,30 @@ public class peliculaService {
     }
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public String validarRta(){
+        String rta;
+        rta = sc.nextLine();
+        while (!rta.toLowerCase().equals("s") && !rta.toLowerCase().equals("n")) {
+            System.out.println("Caracter invalido, ingrese nuevamente si desea cargar otro alumno: ");
+            rta = sc.nextLine();
+        }
+        
+        return rta;
+    }
+    
+
 }
 
