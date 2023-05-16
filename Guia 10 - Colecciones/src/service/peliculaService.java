@@ -27,7 +27,7 @@ public class peliculaService {
         System.out.println("Ingrese el nombre del Director de la pelicula: ");
         String director = sc.nextLine();
         System.out.println("Ingrese la duracion en horas de la pelicula: ");
-        int duracion = sc.nextInt();
+        double duracion = sc.nextDouble();
         sc.nextLine();
         
         arrayList.add(new Pelicula(nombre, director, duracion));
@@ -43,7 +43,29 @@ public class peliculaService {
         System.out.println("===== CARTELERA =====");
         System.out.println("Hay " + arrayList.size() + " peliculas en cartelera");
         for (Pelicula peli : arrayList) {
-            System.out.println(peli.getTitulo());
+            System.out.println("-" + peli.getTitulo());
+        }
+    }
+    
+    public void mostrarPeliculasDuracion(ArrayList<Pelicula> arrayList) {
+        System.out.println("");
+        System.out.println("===== DETALLE DURACION =====");
+        System.out.println("Hay " + arrayList.size() + " peliculas en cartelera");
+        for (Pelicula peli : arrayList) {
+            System.out.print("Titulo: " + peli.getTitulo());
+            System.out.print("     ");
+            System.out.println("Duracion: " + peli.getDuracion() + " horas");
+        }
+    }
+    
+    public void mostrarPeliculasDirector(ArrayList<Pelicula> arrayList) {
+        System.out.println("");
+        System.out.println("===== DETALLE DIRECTORES =====");
+        System.out.println("Hay " + arrayList.size() + " peliculas en cartelera");
+        for (Pelicula peli : arrayList) {
+            System.out.print("Titulo: " + peli.getTitulo());
+            System.out.print("     ");
+            System.out.println("Director: " + peli.getDirector());
         }
     }
     
@@ -63,6 +85,14 @@ public class peliculaService {
     
     public void ordenMenorMayor(ArrayList<Pelicula> arrayList) {
         arrayList.sort(Pelicula.duracionMenor);
+    }
+    
+    public void ordenDirector(ArrayList<Pelicula> arrayList) {
+        arrayList.sort(Pelicula.ordenDirector);
+    }
+    
+    public void ordenTitulo(ArrayList<Pelicula> arrayList) {
+        arrayList.sort(Pelicula.ordenTitulo);
     }
     
     

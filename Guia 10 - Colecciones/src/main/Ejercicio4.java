@@ -22,10 +22,16 @@ public class Ejercicio4 {
         servicio.mostrarMayorHora(cine);
         
         servicio.ordenMayorMenor(cine);
-        servicio.mostrarPeliculas(cine);
+        servicio.mostrarPeliculasDuracion(cine);
         
         servicio.ordenMenorMayor(cine);
-        servicio.mostrarPeliculas(cine);
+        servicio.mostrarPeliculasDuracion(cine);
+        
+        servicio.ordenDirector(cine);
+        servicio.mostrarPeliculasDirector(cine);
+        
+        servicio.ordenTitulo(cine);
+        servicio.mostrarPeliculasDirector(cine);
 
         
     }

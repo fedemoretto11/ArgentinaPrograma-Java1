@@ -69,6 +69,20 @@ public class Pelicula {
         }
     };
     
+    public static Comparator<Pelicula> ordenDirector = new Comparator<Pelicula>(){
+        @Override
+        public int compare(Pelicula p1, Pelicula p2) {
+            return p1.getDirector().compareTo(p2.getDirector());
+        }
+    };
+    
+    public static Comparator<Pelicula> ordenTitulo = new Comparator<Pelicula>(){
+        @Override
+        public int compare(Pelicula p1, Pelicula p2) {
+            return p1.getTitulo().compareTo(p2.getTitulo());
+        }
+    };
+    
 
    
     
