@@ -6,6 +6,7 @@ package main;
 
 import entidades.Pais;
 import java.util.HashSet;
+import java.util.TreeSet;
 import service.paisesService;
 
 /**
@@ -15,12 +16,14 @@ import service.paisesService;
 public class Ejercicio5 {
     public static void main(String[] args) {
         paisesService servicio = new paisesService();
-        HashSet<Pais> onu = new HashSet();
+        TreeSet<Pais> onu = new TreeSet();
         
         servicio.crearPais(onu);
         servicio.imprimirPais(onu);
+        servicio.eliminarPais(onu);
+        servicio.eliminarPais(onu);
+
         
-        System.out.println(onu.toString());
     }
     
  

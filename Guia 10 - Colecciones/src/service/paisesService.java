@@ -6,7 +6,10 @@ package service;
 
 import entidades.Pais;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Scanner;
+import java.util.TreeSet;
+
 
 /**
  *
@@ -15,7 +18,7 @@ import java.util.Scanner;
 public class paisesService {
     Scanner sc = new Scanner(System.in).useDelimiter("\n");
     
-    public void crearPais(HashSet<Pais> paises){
+    public void crearPais(TreeSet<Pais> paises){
         boolean salir  = false;
         String rta;
         
@@ -33,12 +36,33 @@ public class paisesService {
         } while (!salir);
         
     }
-    
-    
-    public void imprimirPais(HashSet<Pais> paises) {
+     
+    public void imprimirPais(TreeSet<Pais> paises) {
         for (Pais p : paises) {
             System.out.println("-" + p.getNombre());
         }
+    }
+
+    public void eliminarPais(TreeSet<Pais> paises) {
+        System.out.println("Ingrese el pais a borrar: ");
+        String nombrePais = sc.nextLine();
+        boolean paisEncontrado = false;
+        Iterator<Pais> it  = paises.iterator();
+        
+        while (it.hasNext()) {
+        Pais p = it.next();
+        if (p.getNombre().equals(nombrePais)) {
+            it.remove();
+            paisEncontrado = true;
+            break;
+            }
+        }
+        if (paisEncontrado) {
+            System.out.println("Pais eliminado correctamente.");
+        } else {
+            System.out.println("Pais no encontrado.");
+        }
+        
     }
     
     public String validarRta(){
@@ -51,4 +75,8 @@ public class paisesService {
         
         return rta;
     }
+    
+   
+    
+    
 }
