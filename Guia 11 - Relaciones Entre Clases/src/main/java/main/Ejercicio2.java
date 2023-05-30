@@ -55,6 +55,7 @@ public class Ejercicio2 {
             turno++;
         }
         System.out.println("");
-        
+        sc.close();
     }
+    
 }
