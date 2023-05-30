@@ -1,0 +1,14 @@
+@startuml
+class entidades.JugadorEquipo
+class entidades.JugadorJugador
+class entidades.PersonaDNI
+class entidades.PersonaPersona
+class java.util.ArrayList
+class main.EjercicioJugador
+class main.EjercicioPersona
+entidades.JugadorEquipo ..> java.util.ArrayList
+main.EjercicioJugador ..> entidades.JugadorEquipo
+main.EjercicioJugador ..> entidades.JugadorJugador
+main.EjercicioPersona ..> entidades.PersonaDNI
+main.EjercicioPersona ..> entidades.PersonaPersona
+@enduml
