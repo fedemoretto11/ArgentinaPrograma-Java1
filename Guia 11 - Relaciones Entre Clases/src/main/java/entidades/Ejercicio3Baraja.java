@@ -16,6 +16,7 @@ public class Ejercicio3Baraja {
     private String palo;
     private ArrayList<Ejercicio3Baraja> salieron = new ArrayList();
 
+    // Constructores
     public Ejercicio3Baraja() {
     }
 
@@ -24,6 +25,7 @@ public class Ejercicio3Baraja {
         this.palo = palo;
     }
 
+    // Getters y Setters
     public Integer getNum() {
         return num;
     }
@@ -45,7 +47,7 @@ public class Ejercicio3Baraja {
     }
     
     
-
+    // To String
     @Override
     public String toString() {
         return "\n" + num + " de " + palo;

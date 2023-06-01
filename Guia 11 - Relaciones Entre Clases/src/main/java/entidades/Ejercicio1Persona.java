@@ -3,29 +3,38 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package entidades;
+import entidades.Ejercicio1Perro;
+import java.util.Iterator;
+import java.util.Scanner;
 
 /**
  *
  * @author fedmo
  */
 public class Ejercicio1Persona {
+    private Scanner sc = new Scanner(System.in).useDelimiter("\n");
+    
     private String nombre;
     private String apellido;
     private Integer edad;
     private Integer dni;
     private Ejercicio1Perro perro;
 
+
+    
+    // Constructor
     public Ejercicio1Persona() {
     }
 
-    public Ejercicio1Persona(String nombre, String apellido, Integer edad, Integer dni, Ejercicio1Perro perro) {
+    public Ejercicio1Persona(String nombre, String apellido, Integer edad, Integer dni) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
         this.dni = dni;
-        this.perro = perro;
+
     }
 
+    // Getters and Setters
     public String getNombre() {
         return nombre;
     }
@@ -69,6 +78,23 @@ public class Ejercicio1Persona {
     @Override
     public String toString() {
         return "Persona{" + "nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", dni=" + dni + ", \n   perro=" + perro + '}';
+    }
+    
+    
+    public void adoptarPerro(Ejercicio1Perro perro){
+        System.out.println("Hola " + nombre + ". Que perrito deseas adoptar de los disponibles??");
+        perro.mostarPerros();
+        String adoptar = sc.nextLine();
+        Iterator<Ejercicio1Perro> it = perro.getDisponibles().iterator();
+        while(it.hasNext()) {
+            Ejercicio1Perro perrito = it.next();
+                if(adoptar.toLowerCase().equals(perrito.getNombre().toLowerCase())) {
+                    perrito.setAdoptado(true);
+                    setPerro(perrito);
+                    perro.setAdoptados(perrito);
+                    it.remove();
+                }
+        }
     }
     
     
