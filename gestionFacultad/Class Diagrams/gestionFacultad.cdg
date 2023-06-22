@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="gestionFacultad">
+  <ClassDiagramComponents>
+    <Class name="Persona" package="" visibility="private" isAbstract="true" xPosition="554.0" yPosition="25.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="protected"/>
+        <Field name="apellido" type="String" visibility="protected"/>
+        <Field name="dni" type="Integer" visibility="protected"/>
+        <Field name="estadoCivil" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Empleado" package="" visibility="public" xPosition="120.0" yPosition="426.0">
+      <Fields>
+        <Field name="anioIncorporacion" type="Date" visibility="private"/>
+        <Field name="numeroDespacho" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Estudiantes" package="" visibility="public" xPosition="373.0" yPosition="426.0">
+      <Fields>
+        <Field name="curso" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Profesores" package="" visibility="public" xPosition="637.0" yPosition="426.0">
+      <Fields>
+        <Field name="departamento" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="PersonalDeServicio" package="" visibility="public" xPosition="906.0" yPosition="426.0">
+      <Fields>
+        <Field name="Seccion" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="PersonalDeServicio" target="Persona"/>
+    <IsRelation name="is" source="Estudiantes" target="Persona"/>
+    <IsRelation name="is" source="Empleado" target="Persona"/>
+    <IsRelation name="is" source="Profesores" target="Persona"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

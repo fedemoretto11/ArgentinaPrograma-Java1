@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="Alquiler" package="ejercicioExtra1" visibility="public" xPosition="26.0" yPosition="96.0">
+      <Fields>
+        <Field name="sc" type="Scanner" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="documento" type="Integer" visibility="private"/>
+        <Field name="fechaAlquiler" type="Date" visibility="private"/>
+        <Field name="fechaDevolucion" type="Date" visibility="private"/>
+        <Field name="posicionAmarre" type="String" visibility="private"/>
+        <Field name="barco" type="Barco" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="Integer" name="documento"/>
+          <Argument type="Date" name="fechaAlquiler"/>
+          <Argument type="Date" name="fechaDevolucion"/>
+          <Argument type="String" name="posicionAmarre"/>
+          <Argument type="Barco" name="barco"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getDocumento" returnType="Integer" visibility="public"/>
+        <Method name="setDocumento" returnType="void" visibility="public">
+          <Argument type="Integer" name="documento"/>
+        </Method>
+        <Method name="getFechaAlquiler" returnType="Date" visibility="public"/>
+        <Method name="setFechaAlquiler" returnType="void" visibility="public">
+          <Argument type="Date" name="fechaAlquiler"/>
+        </Method>
+        <Method name="getFechaDevolucion" returnType="Date" visibility="public"/>
+        <Method name="setFechaDevolucion" returnType="void" visibility="public">
+          <Argument type="Date" name="fechaDevolucion"/>
+        </Method>
+        <Method name="getPosicionAmarre" returnType="String" visibility="public"/>
+        <Method name="setPosicionAmarre" returnType="void" visibility="public">
+          <Argument type="String" name="posicionAmarre"/>
+        </Method>
+        <Method name="getBarco" returnType="Barco" visibility="public"/>
+        <Method name="setBarco" returnType="void" visibility="public">
+          <Argument type="Barco" name="barco"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="completarInfo" returnType="void" visibility="public">
+          <Argument type="Barco" name="barco"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Barco" package="ejercicioExtra1" visibility="public" isAbstract="true" xPosition="474.0" yPosition="96.0">
+      <Fields>
+        <Field name="matricula" type="Integer" visibility="protected"/>
+        <Field name="eslora" type="Integer" visibility="protected"/>
+        <Field name="añoFabricacion" type="Date" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="matricula"/>
+          <Argument type="Integer" name="eslora"/>
+          <Argument type="Date" name="añoFabricacion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMatricula" returnType="Integer" visibility="public"/>
+        <Method name="setMatricula" returnType="void" visibility="public">
+          <Argument type="Integer" name="matricula"/>
+        </Method>
+        <Method name="getEslora" returnType="Integer" visibility="public"/>
+        <Method name="setEslora" returnType="void" visibility="public">
+          <Argument type="Integer" name="eslora"/>
+        </Method>
+        <Method name="getAñoFabricacion" returnType="Date" visibility="public"/>
+        <Method name="setAñoFabricacion" returnType="void" visibility="public">
+          <Argument type="Date" name="añoFabricacion"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="BarcoMotor" package="ejercicioExtra1" visibility="public" xPosition="585.0" yPosition="385.0">
+      <Fields>
+        <Field name="caballosFuerza" type="Integer" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="caballosFuerza"/>
+          <Argument type="Integer" name="matricula"/>
+          <Argument type="Integer" name="eslora"/>
+          <Argument type="Date" name="añoFabricacion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCaballosFuerza" returnType="Integer" visibility="public"/>
+        <Method name="setCaballosFuerza" returnType="void" visibility="public">
+          <Argument type="Integer" name="caballosFuerza"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Veleros" package="ejercicioExtra1" visibility="public" xPosition="363.0" yPosition="385.0">
+      <Fields>
+        <Field name="mastiles" type="Integer" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="mastiles"/>
+          <Argument type="Integer" name="matricula"/>
+          <Argument type="Integer" name="eslora"/>
+          <Argument type="Date" name="añoFabricacion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMastiles" returnType="Integer" visibility="public"/>
+        <Method name="setMastiles" returnType="void" visibility="public">
+          <Argument type="Integer" name="mastiles"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="YateLujo" package="ejercicioExtra1" visibility="public" isFinal="true" xPosition="585.0" yPosition="625.0">
+      <Fields>
+        <Field name="camatores" type="Integer" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="camatores"/>
+          <Argument type="Integer" name="caballosFuerza"/>
+          <Argument type="Integer" name="matricula"/>
+          <Argument type="Integer" name="eslora"/>
+          <Argument type="Date" name="añoFabricacion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCamatores" returnType="Integer" visibility="public"/>
+        <Method name="setCamatores" returnType="void" visibility="public">
+          <Argument type="Integer" name="camatores"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ejercicioExtra1" package="ejercicioExtra1" visibility="public" xPosition="710.0" yPosition="41.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="ejercicioExtra1.Alquiler" target="ejercicioExtra1.Barco" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="ejercicioExtra1.YateLujo" target="ejercicioExtra1.BarcoMotor"/>
+    <HasRelation name="barco" source="ejercicioExtra1.Alquiler" target="ejercicioExtra1.Barco" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="ejercicioExtra1.Veleros" target="ejercicioExtra1.Barco"/>
+    <IsRelation name="is" source="ejercicioExtra1.BarcoMotor" target="ejercicioExtra1.Barco"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="hotel">
+  <ClassDiagramComponents>
+    <Class name="Alojamiento" package="" visibility="public" isAbstract="true" xPosition="561.0" yPosition="29.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="protected"/>
+        <Field name="direccion" type="String" visibility="protected"/>
+        <Field name="localidad" type="String" visibility="protected"/>
+        <Field name="gerente" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="protected"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Hotel" package="" visibility="public" isAbstract="true" xPosition="295.0" yPosition="267.0">
+      <Fields>
+        <Field name="cantidadDeHabitaciones" type="Integer" visibility="protected"/>
+        <Field name="numeroDeCamas" type="Integer" visibility="protected"/>
+        <Field name="cantidadDePisos" type="Integer" visibility="protected"/>
+        <Field name="precioHabitaciones" type="Double" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Extrahotel" package="" visibility="public" isAbstract="true" xPosition="719.0" yPosition="286.0">
+      <Fields>
+        <Field name="privado" type="Boolean" visibility="protected"/>
+        <Field name="metrosCuadrados" type="Integer" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Hotel4Estrellas" package="" visibility="public" xPosition="295.0" yPosition="507.0">
+      <Fields>
+        <Field name="gimnasio" type="Character" visibility="protected"/>
+        <Field name="nombreRestaurant" type="String" visibility="protected"/>
+        <Field name="capacidadRestaurant" type="Integer" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Hotel5Estrellas" package="" visibility="public" isFinal="true" xPosition="294.0" yPosition="708.0">
+      <Fields>
+        <Field name="cantidadSalonesConf" type="Integer" visibility="private"/>
+        <Field name="cantidadSuites" type="Integer" visibility="private"/>
+        <Field name="cantidadLimosinas" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Camping" package="" visibility="public" xPosition="584.0" yPosition="601.0">
+      <Fields>
+        <Field name="capacidadMaxCarpas" type="Integer" visibility="protected"/>
+        <Field name="capacidadBanios" type="Integer" visibility="protected"/>
+        <Field name="restaurant" type="Boolean" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Residencia" package="" visibility="public" xPosition="837.0" yPosition="601.0">
+      <Fields>
+        <Field name="cantidadHabitaciones" type="Integer" visibility="protected"/>
+        <Field name="descuentoGremios" type="Boolean" visibility="protected"/>
+        <Field name="campoDeportivo" type="Boolean" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Hotel4Estrellas" target="Hotel"/>
+    <IsRelation name="is" source="Residencia" target="Extrahotel"/>
+    <IsRelation name="is" source="Hotel5Estrellas" target="Hotel4Estrellas"/>
+    <IsRelation name="is" source="Camping" target="Extrahotel"/>
+    <IsRelation name="is" source="Extrahotel" target="Alojamiento"/>
+    <IsRelation name="is" source="Hotel" target="Alojamiento"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Edificio">
+  <ClassDiagramComponents>
+    <Class name="Edificio" package="ejercicioExtra2" visibility="public" isAbstract="true" xPosition="341.0" yPosition="285.0">
+      <Fields>
+        <Field name="ancho" type="Integer" visibility="protected"/>
+        <Field name="alto" type="Integer" visibility="protected"/>
+        <Field name="largo" type="Integer" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="ancho"/>
+          <Argument type="Integer" name="alto"/>
+          <Argument type="Integer" name="largo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getAncho" returnType="Integer" visibility="public"/>
+        <Method name="setAncho" returnType="void" visibility="public">
+          <Argument type="Integer" name="ancho"/>
+        </Method>
+        <Method name="getAlto" returnType="Integer" visibility="public"/>
+        <Method name="setAlto" returnType="void" visibility="public">
+          <Argument type="Integer" name="alto"/>
+        </Method>
+        <Method name="getLargo" returnType="Integer" visibility="public"/>
+        <Method name="setLargo" returnType="void" visibility="public">
+          <Argument type="Integer" name="largo"/>
+        </Method>
+        <Method name="calcularSuperficie" returnType="void" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
